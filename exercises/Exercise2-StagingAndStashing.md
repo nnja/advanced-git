@@ -9,7 +9,7 @@ Clone the `advanced-git-exercises` repository from [github.com/nnja/advanced-git
 Then, checkout the `exercise2` tag to set things up for the following exercise.
 
 ```
-$> git clone https://github.com/nnja/advanced-git-exercises
+$> git clone git@github.com:nnja/advanced-git-exercises.git
 Cloning into 'advanced-git-exercises'...
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
