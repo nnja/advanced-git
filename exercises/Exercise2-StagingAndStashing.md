@@ -102,7 +102,7 @@ This mechanism is how git knows that the contents of the staging area have chang
 
 
 ### Step 3 - Unstage your Change
-Say you made a mistake while staging your changes and want to start the staging process over, but without losing the changes to your file. Use `git reset` to remove the files from the staging area, without changing the file in the working area. Use `git status` to see that our modifications to `hello.txt` are still there, but they're no longer stages for commit.
+Say you made a mistake while staging your changes and want to start the staging process over, but without losing the changes to your file. Use `git reset` to remove the files from the staging area, without changing the file in the working area. Use `git status` to see that our modifications to `hello.txt` are still there, but they're no longer staged for commit.
 
 ```
 $> git reset hello.txt
