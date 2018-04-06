@@ -1,5 +1,5 @@
 # Advanced Git
-## Exercise Three - Stashing
+## Exercise Three - References
 
 ### Overview
 In this exercise, we'll take a look at our references (`refs`) and create some lightweight and annotated tags. Then we'll make a dangling commit from a "detached HEAD" state and learn why this isn't a great idea.
