@@ -98,7 +98,7 @@ Later on, we decide that deleting `hello.template` was an accident. Let's track 
 $> git log --diff-filter=D --oneline -- hello.template
 713f6a1 Deleting hello.template
 
-# Ah, it was deleted at 713f6a1. Let's use the carrot (^) syntax to checkout hello.template from one commit before that
+# Ah, it was deleted at 713f6a1. Let's use the caret (^) syntax to checkout hello.template from one commit before that
 
 $> git checkout 713f6a1^ -- hello.template
 
