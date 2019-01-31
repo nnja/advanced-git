@@ -242,7 +242,7 @@ $> git log -1 --oneline
 And there we are, back at the commit where we deleted the file `hello.template`
 
 ### Step 4 - Git Revert
-Let's say we want to undo deleting `hello.template`, but don't want to alter history. Reverts can don't look as nice in your history, but are a safer option when working with collaborators.
+Let's say we want to undo deleting `hello.template`, but don't want to alter history. Reverts don't look as nice in your history, but are a safer option when working with collaborators.
 
 ```
 $> git log -1 --oneline
