@@ -67,6 +67,18 @@ $> git checkout master
 Switched to branch 'master'
 Your branch is up-to-date with 'upstream/master'.
 
+$>git pull origin
+From github.com:mhenstell/advanced-git-exercises
+ * [new branch]      exercise10 -> origin/exercise10
+ * [new branch]      exercise2  -> origin/exercise2
+ * [new branch]      exercise3  -> origin/exercise3
+ * [new branch]      exercise4  -> origin/exercise4
+ * [new branch]      exercise5  -> origin/exercise5
+ * [new branch]      exercise6  -> origin/exercise6
+ * [new branch]      exercise7  -> origin/exercise7
+ * [new branch]      exercise9  -> origin/exercise9
+ * [new branch]      master     -> origin/master
+
 $> git branch --set-upstream-to origin/master
 Branch master set up to track local branch origin/master.
 ```
