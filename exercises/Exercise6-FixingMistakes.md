@@ -43,32 +43,32 @@ This is a test of the emergency git-casting system.
 By default, if you don't pass arguments to `git checkout`, it assumed you meant to use `HEAD`.
 **Note:** Remember that `git checkout --` is a destructive operation.
 
-And, all is right again. Let's say we want to check out a file from a specific point in time. For example, we want to see what `hello.txt` was like before it was templatized:
+And, all is right again. Let's say we want to check out a file from a specific point in time. For example, we want to see what `hello.template` was like before it was templatized:
 
 ```
-# Let's find the commit where hello.txt was renamed to hello.template
+# Let's find the commit where hello.template was renamed to hello.template
 
 $> git log --name-status --follow --oneline hello.template
 4b2b90e Replacing greeting with tokens for i18n
-R073    hello.txt       hello.template
+R073    hello.template       hello.template
 fec9e7b Changing Hello to Hola
-M       hello.txt
+M       hello.template
 
-# Now let's checkout hello.txt from one commit before then
+# Now let's checkout hello.template from one commit before then
 
-$> git checkout fec9e7b -- hello.txt
+$> git checkout fec9e7b -- hello.template
 
-$> cat hello.txt
+$> cat hello.template
 Hola World!
 This is a test of the emergency git-casting system.
 ```
 
-As expected, git has restored a snapshot of our `hello.txt` file from the commit `fec9e7b Changing Hello to Hola`. First, git copied the staging area from that commit. Next it copied the file from the updated staging area into our working area. Because of this, our `hello.txt` file appears added to the staging area. We don't really want to keep it, so let's reset it to unstage it and clear the staging area.
+As expected, git has restored a snapshot of our `hello.template` file from the commit `fec9e7b Changing Hello to Hola`. First, git copied the staging area from that commit. Next it copied the file from the updated staging area into our working area. Because of this, our `hello.template` file appears added to the staging area. We don't really want to keep it, so let's reset it to unstage it and clear the staging area.
 
 Then let's go ahead and delete our `hello.template` file:
 
 ```
-$> git reset HEAD hello.txt
+$> git reset HEAD hello.template
 
 $> git rm hello.template
 rm 'hello.template'
@@ -84,7 +84,7 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	hello.txt
+	hello.template
 
 $> git commit -m "Deleting hello.template"
 [exercise6 713f6a1] Deleting hello.template
@@ -115,7 +115,7 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	hello.txt
+	hello.template
 
 $> cat hello.template
 [greeting] [noun]!
@@ -125,14 +125,14 @@ This is a test of the emergency git-casting system.
 Excellent, we now have our `hello.template` file back in our staging area and working area.
 
 ### Step 2 - Clean your Repo
-We should still have this old `hello.txt` file sitting around, cluttering up our repo. We can use `git clean` to blow out anything that isn't tracked by git. We'll do a dry run first, just to be safe:
+We should still have this old `hello.template` file sitting around, cluttering up our repo. We can use `git clean` to blow out anything that isn't tracked by git. We'll do a dry run first, just to be safe:
 
 ```
 $> git clean --dry-run
-Would remove hello.txt
+Would remove hello.template
 
 $> git clean -f
-Removing hello.txt
+Removing hello.template
 ```
 
 All clean!
