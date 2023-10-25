@@ -1,6 +1,8 @@
 # Advanced Git
 ## Exercise One - Under The Hood of a Simple Commit
 
+<!-- This is a comment that I have added to test my first push request to a foreign project -->
+
 ### Overview
 In this exercise, we'll create a simple commit, and then peek under the hood at the objects stored in our `.git` folder to gain some insight into how things work.
 
